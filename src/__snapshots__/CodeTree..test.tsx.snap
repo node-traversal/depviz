@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders code tree 1`] = `
+"<WithStyles(ForwardRef(TreeView)) className=\\"makeStyles-root-1\\" defaultCollapseIcon={{...}} defaultExpandIcon={{...}}>
+  <CodeTreeNodes nodes={{...}} path=\\"\\" />
+</WithStyles(ForwardRef(TreeView))>"
+`;

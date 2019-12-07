@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders empty code-tree nodes 1`] = `"<Fragment />"`;
+
+exports[`renders leaf code-tree nodes 1`] = `
+"<Fragment>
+  <WithStyles(ForwardRef(TreeItem)) nodeId=\\".the-node-name\\" label=\\"the-node-name\\" />
+</Fragment>"
+`;
+
+exports[`renders nested code-tree nodes 1`] = `
+"<Fragment>
+  <WithStyles(ForwardRef(TreeItem)) nodeId=\\".the-node-name\\" label=\\"the-node-name\\">
+    <CodeTreeNodes nodes={{...}} path=\\".the-node-name\\" />
+  </WithStyles(ForwardRef(TreeItem))>
+</Fragment>"
+`;
+
+exports[`renders terminal leaf code-tree nodes 1`] = `
+"<Fragment>
+  <WithStyles(ForwardRef(TreeItem)) nodeId=\\"@the-package.the-node-name\\" label=\\"the-node-name\\" />
+</Fragment>"
+`;

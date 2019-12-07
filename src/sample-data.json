@@ -1,0 +1,36 @@
+{
+  "@examples/simple": {
+    "deps": [
+      {
+        "var": "React",
+        "name": "react"
+      },
+      {
+        "var": "ReactDOM",
+        "name": "react-dom"
+      },
+      {
+        "var": "Greeting",
+        "name": "@examples/simple/simple-example"
+      }
+    ]
+  },
+  "@examples/simple/simple-example": {
+    "deps": [
+      {
+        "var": "React",
+        "name": "react"
+      },
+      {
+        "var": "PropTypes",
+        "name": "prop-types"
+      }
+    ],
+    "props": [
+      {
+        "name": "firstName",
+        "type": "string"
+      }
+    ]
+  }
+}

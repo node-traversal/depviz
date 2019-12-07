@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`convert data to tree 1`] = `
+Array [
+  Dependency {
+    "_deps": Array [
+      Dependency {
+        "_deps": Array [],
+        "_name": "react",
+      },
+      Dependency {
+        "_deps": Array [],
+        "_name": "react-dom",
+      },
+      Dependency {
+        "_deps": Array [
+          Dependency {
+            "_deps": Array [],
+            "_name": "react",
+          },
+          Dependency {
+            "_deps": Array [],
+            "_name": "prop-types",
+          },
+        ],
+        "_name": "@examples/simple/simple-example",
+      },
+    ],
+    "_name": "@examples/simple",
+  },
+  Dependency {
+    "_deps": Array [
+      Dependency {
+        "_deps": Array [],
+        "_name": "react",
+      },
+      Dependency {
+        "_deps": Array [],
+        "_name": "prop-types",
+      },
+    ],
+    "_name": "@examples/simple/simple-example",
+  },
+]
+`;
+
+exports[`convert omit hidden nodes 1`] = `
+Array [
+  Dependency {
+    "_deps": Array [
+      Dependency {
+        "_deps": Array [],
+        "_name": "react-dom",
+      },
+      Dependency {
+        "_deps": Array [
+          Dependency {
+            "_deps": Array [],
+            "_name": "prop-types",
+          },
+        ],
+        "_name": "@examples/simple/simple-example",
+      },
+    ],
+    "_name": "@examples/simple",
+  },
+  Dependency {
+    "_deps": Array [
+      Dependency {
+        "_deps": Array [],
+        "_name": "prop-types",
+      },
+    ],
+    "_name": "@examples/simple/simple-example",
+  },
+]
+`;
+
+exports[`converted nodes with noTraverse must not have dependencies 1`] = `
+Array [
+  Dependency {
+    "_deps": Array [],
+    "_name": "@examples/simple",
+  },
+  Dependency {
+    "_deps": Array [
+      Dependency {
+        "_deps": Array [],
+        "_name": "react",
+      },
+      Dependency {
+        "_deps": Array [],
+        "_name": "prop-types",
+      },
+    ],
+    "_name": "@examples/simple/simple-example",
+  },
+]
+`;

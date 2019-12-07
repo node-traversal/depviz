@@ -1,0 +1,25 @@
+{
+  "ignorePatterns": ["*.svg", "*.css", "node_modules/", "public/", "build/"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["react", "@typescript-eslint"],
+  "globals": {
+    "document": true
+  },
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "react/prop-types": "off"
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "parser": "@typescript-eslint/parser"
+}

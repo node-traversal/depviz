@@ -1,0 +1,49 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: [ubuntu-latest]
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+      env:
+        CI: true
+
+    - name: Cache node modules
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ runner.OS }}-${{ matrix.node-version }}-build-${{ hashFiles('**/yarn.lock') }}
+
+    - name: Install Dependencies
+      run: yarn install
+
+    - name: Lint
+      run: yarn eslint:ci
+
+    - name: Lint Commits
+      run: yarn commit:lint
+
+    - name: Test
+      run: yarn test:ci
+
+    - name: Build
+      run: yarn build
+
+    - name: Release
+      if: startsWith(github.ref, 'refs/tags/')
+      run: echo "Releasing tag $GITHUB_REF"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

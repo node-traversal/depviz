@@ -1,0 +1,76 @@
+{
+  "name": "depviz",
+  "version": "0.1.",
+  "private": true,
+  "scripts": {
+    "analyze": "yarn build && source-map-explorer 'build/static/js/*.js'",
+    "cz": "git-cz",
+    "eslint:ci": "eslint src/**/*.ts[x] src/*.ts[x] --max-warnings 0",
+    "commit:info": "echo $GITHUB_REF sha=$GITHUB_SHA",
+    "commit:lint": "commitlint --from 3c563e9475e9e3e14be420b22d3321a91efd867a",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "release": "standard-version",
+    "test": "jest",
+    "test:ci": "jest --coverage"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.7.1",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/lab": "^4.0.0-alpha.34",
+    "lodash": "^4.17.15",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "standard-changelog": "^2.0.18"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.23",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^12.12.14",
+    "@types/react": "^16.9.15",
+    "@types/react-dom": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "3.0.2",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-react": "^7.17.0",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "react-scripts": "3.3.0",
+    "source-map-explorer": "^2.1.2",
+    "standard-version": "^7.0.1",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.3"
+  }
+}

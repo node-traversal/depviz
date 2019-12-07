@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders application skeleton 1`] = `
+"<div className=\\"App\\">
+  <header className=\\"App-header\\">
+    <img src=\\"A MOCK SVG\\" className=\\"App-logo\\" alt=\\"logo\\" />
+    <CodeTree dependencies={{...}} />
+  </header>
+</div>"
+`;

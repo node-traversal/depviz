@@ -7,7 +7,7 @@
     "cz": "git-cz",
     "eslint:ci": "eslint src/**/*.ts[x] src/*.ts[x] --max-warnings 0",
     "commit:info": "echo $GITHUB_REF sha=$GITHUB_SHA",
-    "commit:lint": "commitlint --from 3c563e9475e9e3e14be420b22d3321a91efd867a",
+    "commit:lint": "commitlint --from 9ecc76bf8f9bc17506d8b877d2520d361036f1a6",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "release": "standard-version",
